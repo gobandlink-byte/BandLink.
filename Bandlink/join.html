@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join | BandLink</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎸 BandLink</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="features.html">Features</a>
+      <a href="join.html">Join</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Join the BandLink Waitlist</h2>
+    <form onsubmit="thankYou(event)">
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea placeholder="What kind of musician are you?" rows="3"></textarea><br>
+      <button type="submit">Join Now</button>
+    </form>
+    <p id="msg"></p>
+  </section>
+
+  <footer>
+    © 2025 BandLink
+  </footer>
+
+  <script>
+    function thankYou(e){
+      e.preventDefault();
+      document.getElementById('msg').innerText = "✅ Thanks for joining! We’ll email you soon.";
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
